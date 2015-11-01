@@ -37,4 +37,14 @@ public class Text extends Actor {
         img.drawString(str, 0, height-1-metrics.getDescent());
         setImage(img);
     }
+    
+    /**
+     * Set the rendered string to a new value and rerender.
+     * @param str the new string to render
+     */
+    public void setString(String str) {
+        this.str = str;
+        createImage();
+    }
+   
 }
